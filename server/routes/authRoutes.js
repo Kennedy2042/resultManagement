@@ -3,7 +3,8 @@ const cors = require("cors")
 const router = express.Router();
 const{
     test,
-    schReg
+    schReg,
+    schLogin
 } = require("../controllers/authController")
 
 router.use(
@@ -15,6 +16,7 @@ router.use(
 
 router.get("/", test)
 router.post("/register", schReg)
+router.post("/login", schLogin)
 
 
 
